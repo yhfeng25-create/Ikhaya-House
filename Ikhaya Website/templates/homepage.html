@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif; 
+            margin: 0;
+            padding: 0;
+            text-align: center; 
+            font-size: 20px;
+        }
+        .image-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .the10th{
+            width: 20%;
+            position: absolute; /* 添加绝对定位 */
+            top: 30px; /* 距离顶部 */
+            left: 40px; /* 距离左边 */
+            z-index: 10; /* 确保浮于原图片之上 */
+        }
+        .uwclogo{
+            width: 20%;
+            position: absolute; /* 添加绝对定位 */
+            top: -30px; /* 距离顶部*/
+            right: 40px; /* 距离右边 */
+            z-index: 10; /* 确保浮于原图片之上 */
+
+        }
+        .house-image {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            opacity: 0.4;
+            filter: brightness(1.2);
+            display: block;
+            position: relative; /* 为定位子元素提供参考 */
+            z-index: 1; /* 基础层级 */
+        }
+        .text-overlay {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(1, 11, 4);
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+            width: 100%;
+            z-index: 5; /* 确保文字在两张图片之上 */
+        }
+        .main-title {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 29px;
+            max-width: 1000px;
+            margin: 90px auto 0 auto;
+            font-weight: bold;
+            line-height: 1.5;
+            color: rgb(0, 0, 0);
+        }
+        .nav-overlay {
+            position: absolute;
+            bottom: 100px;
+            left: 20px;
+            text-align: left;
+            z-index: 5; /* 确保导航在图片之上 */
+        }
+        .nav-overlay a {
+            display: block;
+            font-size: 24px;
+            margin: 10px 0;
+            color: white;
+            text-decoration: none;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            padding: 5px 15px;
+            background-color: rgba(0,0,0,0.3);
+            border-radius: 5px;
+        }
+        .nav-overlay a:hover {
+            background-color: rgba(0,0,0,0.5);
+        }
+        .watermark{
+            font-family: 'Times New Roman', Times, serif;
+            position:absolute;
+            right:20px;
+            bottom:100px;
+            text-align:right;
+            z-index: 5;
+        }
+        .official-website {
+            position: absolute;
+            right: 20px;
+            bottom: 120px;
+            text-align: right;
+            z-index: 5;
+        }
+        .official-website a {
+            display: inline-block;
+            font-size: 20px;
+            margin: 20px 0;
+            color: white;
+            text-decoration: none;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            padding: 8px 20px;
+            background-color: rgba(0,0,0,0.3);
+            border-radius: 5px;
+            font-family: Arial;
+        }
+        .official-website a:hover {
+            background-color: rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- 图片和文字部分 -->
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/house_logo.jpg') }}" 
+             alt="Ikhaya House Logo" 
+             class="house-image">
+        <img src="{{ url_for('static', filename='images/10th aniversury.png') }}" 
+             alt="10th Anniversary" 
+             class="the10th">
+        <img src="{{ url_for('static', filename='images/UWC LOGO.png') }}" 
+             alt="uwc logo" 
+             class="uwclogo">    
+        <div class="text-overlay">
+            <div class="main-title">Ikhaya House</div>
+            <div class="subtitle">The Best House in UWC CSC!</div>
+            <div class="body">Located on the fourth floor of block A, Ikhaya is one of the twelve amazing houses in the school. The people here are friendly and easy to get along with. Have fun in Ikhaya and UWCCSC!</div>
+        </div>
+        
+        <!-- 导航链接放在图片左下角 -->
+        <div class="nav-overlay">
+            <a href="/CR">COMMON ROOM</a>
+            <a href="/members">MEMBERS</a>
+            <a href="/about">ABOUT</a>
+            <a href="/contact">CONTACT</a>
+        </div>
+        
+        <div class="watermark">©2025 Ikhaya House of UWC Changshu China.</div>
+        
+        <!-- 官网链接，样式与导航链接一致 -->
+        <div class="official-website">
+            <a href="https://www.uwcchina.org" target="_blank">UWC OFFICIAL WEBSITE</a>
+        </div>
+    </div>
+</body>
+</html>

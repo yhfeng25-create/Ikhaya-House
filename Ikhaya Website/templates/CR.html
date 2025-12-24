@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <title>{{title}}</title>
+    <head>
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                margin: 40px;
+                background-color: #cfcdcd;
+                position: relative; /* 为绝对定位提供参考 */
+                min-height: 80vh; /* 确保有足够高度 */
+            }
+            .title {
+                font-size: 50px;
+                font-weight: bold;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .description {
+                font-size: 24px;
+                margin-bottom: 40px;
+                text-align: center;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                line-height: 1.5;
+            }
+            .image-container {
+                position: relative;
+                min-height: 500px; /* 容器最小高度 */
+            }
+            .CR-image{
+                width: 40%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                margin-left: 8%;
+                top: 0; /* 左上角 */
+                left: 0;
+                z-index: 2;
+            }
+            .CR-image2{
+                width: 40%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                margin-right: 8%;
+                margin-bottom: -20%;
+                bottom: 0; /* 右下角 */
+                right: 0;
+                z-index: 1;
+            }
+            .CR-image3{
+                width: 40%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                margin-left: 8%;
+                margin-bottom: -50%;
+                bottom: 0; /* 左下角 */
+                left: 0;
+                z-index: 1;
+            }
+            .CR-image4{
+                width: 40%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                margin-right: 8%;
+                margin-bottom: -80%;
+                bottom: 0; /* 右下角 */
+                right: 0;
+                z-index: 1;
+            }
+            .CR-image5{
+                width: 40%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                margin-left: 8%;
+                margin-bottom: -110%;
+                bottom: 0; /* 左下角 */
+                left: 0;
+                z-index: 1;
+            }
+            .CR-image6{
+                width: 40%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                margin-right: 8%;
+                margin-bottom: -140%;
+                bottom: 0; /* 右下角 */
+                right: 0;
+                z-index: 1;
+            }
+            .CR-image7{
+                width: 40%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+                position: absolute;
+                margin-left: 8%;
+                margin-bottom: -170%;
+                bottom: 0; /* 左下角 */
+                left: 0;
+                z-index: 1;
+            }
+            
+        </style>
+        <title>Common Room - Ikhaya House</title>
+    </head>
+    <body>
+        <div class="title">Common Room</div>
+        <div class="description">A Common Room is where we can have house activities. It is a lovely place in a house.</div>
+        
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/CR.jpg') }}" 
+                 alt="CR" 
+                 class="CR-image">
+            <img src="{{ url_for('static', filename='images/CR2.jpg') }}" 
+                 alt="CR" 
+                 class="CR-image2">
+            <img src="{{ url_for('static', filename='images/CR3.jpg') }}" 
+                 alt="CR" 
+                 class="CR-image3">
+            <img src="{{ url_for('static', filename='images/CR4.jpg') }}" 
+                 alt="CR" 
+                 class="CR-image4">
+            <img src="{{ url_for('static', filename='images/CR5.jpg') }}" 
+                 alt="CR" 
+                 class="CR-image5">
+            <img src="{{ url_for('static', filename='images/CR6.jpg') }}" 
+                 alt="CR" 
+                 class="CR-image6">
+            <img src="{{ url_for('static', filename='images/CR7.jpg') }}" 
+                 alt="CR" 
+                 class="CR-image7">
+        </div>
+        </div>
+    </body>
+</html>
